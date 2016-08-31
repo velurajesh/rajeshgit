@@ -1,0 +1,9 @@
+div#newTest{
+	float:left;
+	clear:both;
+}
+
+video{
+	color: red;
+	float: right;
+}

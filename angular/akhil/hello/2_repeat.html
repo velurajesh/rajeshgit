@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="">
+<body>
+<INPUT type="text" ng-model="name" placeholder="What's your name?" /> {{name}}
+
+<h3> looping with ng-repeat </h3>
+<ul ng-init="names=['Swati', 'Guddi', 'Golu']"  >
+	<li ng-repeat="var in names">{{$index + 1}} {{var }}  </li>
+</ul>
+<script src="../ng142/angular.min.js"> </script>
+</body>
+</html>

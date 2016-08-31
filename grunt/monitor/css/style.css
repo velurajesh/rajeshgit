@@ -1,0 +1,33 @@
+body {
+  background: black; }
+
+p {
+  color: black; }
+
+div {
+  color: blue; }
+  div h1 {
+    color: red;
+    background: black; }
+  div h2 {
+    text-decoration: underline;
+    color: black; }
+
+h4 {
+  color: red;
+  float: left; }
+  h4 span {
+    background: yellow; }
+
+header {
+  font-family: arial;
+  color: blue;
+  float: right; }
+  header h1 {
+    font-size: 1850px; }
+  header h2 {
+    display: none; }
+  header h4 {
+    border-radius: 20px; }
+
+/*# sourceMappingURL=style.css.map */

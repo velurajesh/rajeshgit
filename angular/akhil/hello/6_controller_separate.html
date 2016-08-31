@@ -1,0 +1,17 @@
+<html ng-app="repeatApp">
+<head><title>ng repeat App</title></head>
+<body ng-controller="MainCtrl as ctrl">
+
+  <div ng-repeat="frnd in ctrl.friends">
+    <div><span  ng-bind="frnd.name"> </span>
+         <small>(Index:{{$index+1}}, First Element:{{$first}},  Middle Element:{{$middle}}, At Even Position:{{$even}})</small>
+    </div>
+  </div>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js">
+</script>
+<script type="text/javascript" src="controller_separate.js">
+</script>
+</body>
+</html>

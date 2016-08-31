@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body ng-app="myFormValidatorApp">
+
+<h3>Form Validation (with Error Messages)</h3>
+<div ng-controller="validateCtrl as vc">
+<form  name="myForm"   ng-submit="vc.submitForm()" >
+  <p>Username:<br>
+    <input type="text" name="user" ng-model="vc.user" required>
+    <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+    <span ng-show="myForm.user.$error.required">Username is required.</span>
+    </span>
+  </p>
+  <p>Email:<br>
+    <input type="email" name="email" ng-model="vc.email" required>
+    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+    <span ng-show="myForm.email.$error.required">Email is required.</span>
+    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+    </span>
+  </p>
+  <p>
+    <input type="submit"
+    ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+    myForm.email.$dirty && myForm.email.$invalid"
+    >
+  </p>
+  <h4>Form Submission Status : {{vc.status}}</h4>
+</form>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<script>
+angular.module('myFormValidatorApp', [])
+      .controller('validateCtrl', function() {
+          this.email = 'angular.js@gmail.com';
+          this.status = "Form not submitted";
+          this.submitForm = function(){
+            this.status = "Form Submitted successfully. User [" + this.user
+            + "] email ["  + this.email + "]";
+            console.log(this.status);
+          };
+      });
+</script>
+</body>
+</html>
