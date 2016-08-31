@@ -1,0 +1,41 @@
+ <div class="container">
+   <div class="row">
+		<div align="center">
+      <h1>{{message}} </h1>
+			<h2>NodeJS Help Section</h2>
+      <a href='/addForm'>
+        <span class="glyphicon glyphicon-plus"></span>Add NodeJS Help here.....
+      </a>
+      <div class="table-responsive">          
+        <table class="table">
+          <thead>
+            <tr>
+              <th>NodeJS Code</th>
+              <th>Description</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{#each recordsArray}}
+          <tr>
+              <td>{{this.nodeCommands}}</td>
+              <td>{{this.description}}</td>
+              <td><a href='/edit?tech={{this.nodeCommands}}'>
+                <span class="glyphicon glyphicon-pencil"></span>
+              </a></td>
+              <td><a href='/delete?tech={{this.nodeCommands}}'>
+                <span class="glyphicon glyphicon-remove"></span>
+              </a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <a href='/addForm'>
+        <span class="glyphicon glyphicon-plus"></span>Add NodeJS Help here.....
+      </a>
+		</div>
+		<br/>
+    </div>
+ </div>
